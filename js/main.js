@@ -1,9 +1,5 @@
 var app = {
-    $( "#book" ).animate({
-        left: "+=50"
-      }, 4000, function() {
-        // Animation complete.
-      });
+    
 
     /**
     The route allow to get the #
@@ -30,7 +26,6 @@ var app = {
                     self.slidePage(new GameView(1).render());
                 break;
                 case "Load" :
-                   
                     self.slidePage(new GameView(0).render());
                 break;
                 case "Map":
@@ -118,7 +113,11 @@ var app = {
 
     initialize: function() {
         var self = this;
-        
+        $( "#book" ).animate({
+        left: "+=50"
+      }, 4000, function() {
+        // Animation complete.
+      });
         this.detailsURL = /[A-z]{1,}/;
         this.registerEvents();
         this.store = new MemoryStore(function() {
