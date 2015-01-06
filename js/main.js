@@ -19,13 +19,25 @@ var app = {
         }
         
         var match = hash.match(/[A-z]{1,}/);
-        self.showAlert(" "+match[0], "URL a Suivre");
-        /*if (match) {
+        
+        if (match) {
+            self.showAlert(" "+match[0], "URL a Suivre");
 
-            //self.showAlert(""+ match[1], "URL a Suivre");
-            //self.slidePage(new EmployeeView(employee).render());
+            switch(match[0]){
+                case "New" :
+                    self.slidePage(new GameView(1).render());
+                break;
+                case "Load" :
+                    self.slidePage(new GameView(0).render());
+                break;
+                case "Map":
+                    self.slidePage(new MapView().render());
+                break;
+                default : 
+                    this.slidePage(this.homePage);
+            };
             
-        }*/
+        }
     },
 
     slidePage: function(page) {
