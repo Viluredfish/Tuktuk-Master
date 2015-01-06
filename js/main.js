@@ -1,5 +1,9 @@
 var app = {
 
+
+    /**
+    The route allow to get the #
+    */
     route: function() {
         var self = this;
         var hash = window.location.hash;
@@ -14,9 +18,10 @@ var app = {
         }
         var match = hash.match(this.detailsURL);
         if (match) {
-            this.store.findById(Number(match[1]), function(employee) {
-                self.slidePage(new EmployeeView(employee).render());
-            });
+
+            self.showalert(""+ match[1], "URL a Suivre");
+            //self.slidePage(new EmployeeView(employee).render());
+            
         }
     },
 
