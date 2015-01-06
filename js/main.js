@@ -113,11 +113,7 @@ var app = {
 
     initialize: function() {
         var self = this;
-        $( "#book" ).animate({
-        left: "+=50"
-      }, 4000, function() {
-        // Animation complete.
-      });
+        $( "#book" ).css("background", "#000");
         this.detailsURL = /[A-z]{1,}/;
         this.registerEvents();
         this.store = new MemoryStore(function() {
