@@ -107,13 +107,18 @@ var app = {
             });
         }
         $(window).on('hashchange', $.proxy(this.route, this));
+
+
+        $( "#book" ).on('touchstart', 'div', function(event) {
+                $(event.target).css("background", "#000");;
+        });
+        
     },
 
 
 
     initialize: function() {
         var self = this;
-        $( "#book" ).css("background", "#000");
         this.detailsURL = /[A-z]{1,}/;
         this.registerEvents();
         this.store = new MemoryStore(function() {
