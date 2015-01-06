@@ -17,10 +17,10 @@ var app = {
             return;
         }
         var match = hash.match(this.detailsURL);
-        self.showalert(""+ match[1], "URL a Suivre");
+        self.showAlert(""+ match[1], "URL a Suivre");
         if (match) {
 
-            self.showalert(""+ match[1], "URL a Suivre");
+            //self.showAlert(""+ match[1], "URL a Suivre");
             //self.slidePage(new EmployeeView(employee).render());
             
         }
