@@ -110,7 +110,7 @@ var app = {
 
 
         $( "#book" ).on('touchstart', 'div', function(event) {
-                $(event.target).css("background", "#000");;
+                $(event.target).css("background-color","yellow");;
         });
         
     },
