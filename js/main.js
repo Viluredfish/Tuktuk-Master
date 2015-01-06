@@ -7,7 +7,8 @@ var app = {
     route: function() {
         var self = this;
         var hash = window.location.hash;
-        if (!hash) {
+        self.showAlert(this.detailsURL+" ", "URL a Suivre");
+        /*if (!hash) {
             if (this.homePage) {
                 this.slidePage(this.homePage);
             } else {
@@ -17,13 +18,13 @@ var app = {
             return;
         }
         var match = hash.match(this.detailsURL);
-        self.showAlert(""+ match[1], "URL a Suivre");
-        if (match) {
+        */
+        /*if (match) {
 
             //self.showAlert(""+ match[1], "URL a Suivre");
             //self.slidePage(new EmployeeView(employee).render());
             
-        }
+        }*/
     },
 
     slidePage: function(page) {
@@ -95,7 +96,7 @@ var app = {
                 $(event.target).removeClass('tappable-active');
             });
         }
-        $(window).on('hashchange', $.proxy(this.route, this));
+        $(window).on('hashchange', self.showAlert("Hello World ", "URL a Suivre"););
     },
 
 
