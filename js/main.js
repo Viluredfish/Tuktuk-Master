@@ -17,6 +17,7 @@ var app = {
             return;
         }
         var match = hash.match(this.detailsURL);
+        self.showalert(""+ match[1], "URL a Suivre");
         if (match) {
 
             self.showalert(""+ match[1], "URL a Suivre");
