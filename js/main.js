@@ -7,7 +7,7 @@ var app = {
     route: function() {
         var self = this;
         var hash = window.location.hash;
-        self.showAlert(this.detailsURL+" ", "URL a Suivre");
+        self.showAlert("Hello World ", "URL a Suivre");
         /*if (!hash) {
             if (this.homePage) {
                 this.slidePage(this.homePage);
@@ -96,7 +96,7 @@ var app = {
                 $(event.target).removeClass('tappable-active');
             });
         }
-        $(window).on('hashchange', self.showAlert("Hello World ", "URL a Suivre"););
+        $(window).on('hashchange', $.proxy(this.route, this));
     },
 
 
