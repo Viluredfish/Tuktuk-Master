@@ -17,8 +17,8 @@ var app = {
             }
             return;
         }
-        self.showAlert(" "+hash, "URL a Suivre");
-        var match = hash.match(this.detailsURL);
+        self.showAlert(" "+this.detailsURL, "URL a Suivre");
+        //var match = hash.match(this.detailsURL);
         
         /*if (match) {
 
@@ -104,7 +104,7 @@ var app = {
 
     initialize: function() {
         var self = this;
-        this.detailsURL = /^#employees\/(\d{1,})/;
+        this.detailsURL = /^#{1,}/;
         this.registerEvents();
         this.store = new MemoryStore(function() {
             self.route();
