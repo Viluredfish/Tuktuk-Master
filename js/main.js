@@ -118,11 +118,7 @@ var app = {
 
     initialize: function() {
         var self = this;
-        $( "#book" ).animate({
-            left: "+=50"
-          }, 4000, function() {
-            // Animation complete.
-          });
+        
         this.detailsURL = /[A-z]{1,}/;
         this.registerEvents();
         this.store = new MemoryStore(function() {
