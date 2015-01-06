@@ -21,8 +21,6 @@ var app = {
         var match = hash.match(/[A-z]{1,}/);
         
         if (match) {
-            self.showAlert(" "+match[0], "URL a Suivre");
-
             switch(match[0]){
                 case "New" :
                     self.showAlert("status", "Commencer une nouvelle partie");
@@ -35,8 +33,7 @@ var app = {
                 case "Map":
                     self.slidePage(new MapView().render());
                 break;
-                default : 
-                    this.slidePage(this.homePage);
+                
             };
             
         }
