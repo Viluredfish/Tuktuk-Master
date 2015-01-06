@@ -15,34 +15,29 @@
     		<li><a href="#New">New game</a></li>
     		<li><a href="#Load">Continue</a></li>
     </ul>
+    <div id="book" style="width:50px; height:50px; background:#ddd;"></div>
     </div>
 </script>
 
-
-
-
-
-<script id="employee-tpl" type="text/x-handlebars-template">
-    <div class='header'><a href='#' class="button header-button header-button-left">Back</a><h1>Details</h1></div>
-    <div class='details'>
-        <img class='employee-image' src='img/{{firstName}}_{{lastName}}.jpg' />
-        <h1>{{firstName}} {{lastName}}</h1>
-        <h2>{{title}}</h2>
-        <span class="location"></span>
-        <ul>
-            <li><a href="tel:{{officePhone}}">Call Office<br/>{{officePhone}}</a></li>
-            <li><a href="tel:{{cellPhone}}">Call Cell<br/>{{cellPhone}}</a></li>
-            <li><a href="sms:{{cellPhone}}">SMS<br/>{{cellPhone}}</a></li>
-        </ul>
-    </div>
-</script>
 
 <script id="game-tpl" type="text/x-handlebars-template">
     <div class='header'>
     	<a href='#' class="button header-button header-button-left">Back</a>
-    	<h1>Details</h1>
+    	<h1>Menu</h1>
     </div>
     
+</script>
+
+<script type="text/javascript">
+	$( "#book" ).click(function() {
+	  $( "#book" ).animate({
+	    opacity: 0.25,
+	    left: "+=50",
+	    height: "toggle"
+	  }, 5000, function() {
+	    // Animation complete.
+	  });
+	});
 </script>
 
 
@@ -53,6 +48,7 @@
 <script src="js/main.js"></script>
 <script src="js/HomeView.js"></script>
 <script src="js/GameView.js"></script>
+<script src="js/MapView.js"></script>
 
 </body>
 </html>

@@ -22,12 +22,11 @@ var app = {
         
         if (match) {
             switch(match[0]){
-                case "New" :
-                    self.showAlert("status", "Commencer une nouvelle partie");
+                case "New" 
                     self.slidePage(new GameView(1).render());
                 break;
                 case "Load" :
-                    self.showAlert("status", "Continuer la partie");
+                   
                     self.slidePage(new GameView(0).render());
                 break;
                 case "Map":
@@ -35,7 +34,7 @@ var app = {
                 break;
                 
             };
-            
+             //self.showAlert("status", "Continuer la partie");
         }
     },
 
