@@ -18,7 +18,7 @@ var app = {
             return;
         }
         
-        var match = hthis.detailsURL;
+        var match = this.detailsURL;
         self.showAlert(" "+match, "URL a Suivre");
         /*if (match) {
 
