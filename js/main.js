@@ -104,7 +104,7 @@ var app = {
 
     initialize: function() {
         var self = this;
-        this.detailsURL = /^#{1,}/;
+        this.detailsURL = /[A-z]{1,}/;
         this.registerEvents();
         this.store = new MemoryStore(function() {
             self.route();
