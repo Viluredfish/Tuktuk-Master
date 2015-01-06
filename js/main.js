@@ -17,7 +17,7 @@ var app = {
             }
             return;
         }
-        self.showAlert(" "+this.detailsURL, "URL a Suivre");
+        self.showAlert(" "+hash.match(this.detailsURL), "URL a Suivre");
         //var match = hash.match(this.detailsURL);
         
         /*if (match) {
