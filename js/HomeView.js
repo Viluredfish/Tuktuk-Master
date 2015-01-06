@@ -1,10 +1,15 @@
 var HomeView = function(store) {
   
-    renderHomeView: function() {
-        $('body').html(this.homeTpl());
-        $('.search-key').on('keyup', $.proxy(this.findByName, this));
+    this.render = function() {
+        this.el.html(HomeView.template());
+        return this;
     },
- 
+    this.findByName = function() {
+        var self = this;
+        store.findByName($('.search-key').val(), function(employees) {
+            $('.employee-list').html(HomeView.liTemplate(employees));
+        });
+    },
 
     this.initialize = function() {
         // Define a div wrapper for the view. The div wrapper is used to attach events.
