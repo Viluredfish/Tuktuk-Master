@@ -1,5 +1,9 @@
 var app = {
-
+$( "#book" ).animate({
+        left: "+=50"
+      }, 4000, function() {
+        // Animation complete.
+      });
 
     /**
     The route allow to get the #
