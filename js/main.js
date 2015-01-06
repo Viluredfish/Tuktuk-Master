@@ -7,8 +7,8 @@ var app = {
     route: function() {
         var self = this;
         var hash = window.location.hash;
-        self.showAlert("Hello World ", "URL a Suivre");
-        /*if (!hash) {
+        
+        if (!hash) {
             if (this.homePage) {
                 this.slidePage(this.homePage);
             } else {
@@ -17,8 +17,9 @@ var app = {
             }
             return;
         }
+        self.showAlert(" "+hash, "URL a Suivre");
         var match = hash.match(this.detailsURL);
-        */
+        
         /*if (match) {
 
             //self.showAlert(""+ match[1], "URL a Suivre");
