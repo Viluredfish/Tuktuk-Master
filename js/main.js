@@ -15,10 +15,7 @@ var app = {
         }
     },
 
-    renderHomeView: function() {
-        $('body').html(this.homeTpl());
-        $('.search-key').on('keyup', $.proxy(this.findByName, this));
-    },
+    
 
     initialize: function() {
         var self = this;
