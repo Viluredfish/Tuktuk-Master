@@ -22,7 +22,7 @@ var app = {
         
         if (match) {
             switch(match[0]){
-                case "New" 
+                case "New" :
                     self.slidePage(new GameView(1).render());
                 break;
                 case "Load" :
