@@ -97,6 +97,13 @@ var app = {
             $('body').on('touchend', 'a', function(event) {
                 $(event.target).removeClass('tappable-active');
             });
+
+
+            $('body').on('touchstart', '#book', function(event) {
+               
+               $(event.target).css("background-color","yellow");
+            });
+
         } else {
             // ... if not: register mouse events instead
             $('body').on('mousedown', 'a', function(event) {
@@ -105,13 +112,17 @@ var app = {
             $('body').on('mouseup', 'a', function(event) {
                 $(event.target).removeClass('tappable-active');
             });
+
+            $('body').on('mousedown', '#book', function(event) {
+               
+               $(event.target).css("background-color","yellow");
+            });
         }
         $(window).on('hashchange', $.proxy(this.route, this));
+        
 
-
-        $( "#book" ).on('touchstart', 'div', function(event) {
-                $(event.target).css("background-color","yellow");;
-        });
+ 
+        
         
     },
 
