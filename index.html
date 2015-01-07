@@ -27,11 +27,36 @@
 <script id="game-tpl" type="text/x-handlebars-template">
     <div class='header'>
     	<a href='#' class="button header-button header-button-left">Back</a>
-    	<h1>Menu</h1>
+        <h1>{{nickName}}</h1>
+        <ul class="black">
+            <li>Level : {{lvl}}</li>
+            <li>Money : {{money}}$</li>
+            <li>Title : {{titre}}</li>
+            <li>Experience : {{experience}}</li>
+            <li>Fatigue : {{exhaust}}</li>
+        </ul>
     </div>
     
 </script>
 <!--  END TPL GAME ////////////////////////////////////////////////////////-->
+
+<!--  TPL NewGAME //////////////////////////////////////////////////////////////////////////-->
+<script id="newGame-tpl" type="text/x-handlebars-template">
+    <div class='header'>
+        <a href='#' class="button header-button header-button-left">Back</a>
+        <h1>Create Game</h1>
+        <div class="warning"><p class="black">Warning this will reset your game.</p></div>
+        <ul class="black">
+            <li>Level : {{lvl}}</li>
+            <li>Money : {{money}}$</li>
+            <li>Title : {{titre}}</li>
+            <li>Experience : {{experience}}</li>
+            <li>Fatigue : {{exhaust}}</li>
+        </ul>
+    </div>
+    
+</script>
+<!--  END TPL NewGAME ////////////////////////////////////////////////////////-->
 
 
 
@@ -43,6 +68,7 @@
 <script src="js/main.js"></script>
 <script src="js/HomeView.js"></script>
 <script src="js/GameView.js"></script>
+<script src="js/NewGameView.js"></script>
 <script src="js/MapView.js"></script>
 
 </body>

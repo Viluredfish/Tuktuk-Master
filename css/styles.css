@@ -229,3 +229,6 @@ li>a.tappable-active {
     -webkit-transition-duration: .375s;
     -o-transition-duration: .375s;
 }
+.black{
+    color:#000;
+}

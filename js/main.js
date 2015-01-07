@@ -23,10 +23,10 @@ var app = {
         if (match) {
             switch(match[0]){
                 case "New" :
-                    self.slidePage(new GameView(1).render());
+                    self.slidePage(new NewGameView().render(this.store));
                 break;
                 case "Load" :
-                    self.slidePage(new GameView(0).render());
+                    self.slidePage(new GameView(0).render(this.store));
                 break;
                 case "Map":
                     self.slidePage(new MapView().render());
